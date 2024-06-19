@@ -1,0 +1,12 @@
+[package]
+name = "rsedit"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.7", features = ["derive"] }
+console = "0.15.8"
+indicatif = "0.17.8"
+rand = "0.8.5"
+regex = "1.10.5"
+tokio = "1.38.0"
