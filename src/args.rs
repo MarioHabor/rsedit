@@ -1,6 +1,6 @@
 use clap::{Parser, Subcommand};
 
-/// A files and direcories rename tool
+/// A batch rename tool for files and directories
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 pub struct Cli {
@@ -10,17 +10,17 @@ pub struct Cli {
 
 #[derive(Subcommand, Debug)]
 pub enum Commands {
-    /// Renames files or direcories
+    /// Renames files or directories
     Rename {
-        /// rename many file that match a pattern
+        /// rename many files that match a pattern
         #[arg(short, long)]
         file: bool,
-        /// rename many direcories that match a pattern
+        /// rename many directories that match a pattern
         #[arg(short, long)]
         direcory: bool,
     },
 
-    /// Deletes files
+    /// Deletes files or directories
     Delete {
         #[arg(short, long)]
         file: bool,
