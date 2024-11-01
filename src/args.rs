@@ -22,8 +22,10 @@ pub enum Commands {
 
     /// Deletes files or directories
     Delete {
+        /// delete many files that match a pattern
         #[arg(short, long)]
         file: bool,
+        /// delete many directories that match a pattern
         #[arg(short, long)]
         direcory: bool,
     },
