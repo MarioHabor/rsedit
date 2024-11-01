@@ -11,7 +11,7 @@ pub struct Cli {
 #[derive(Subcommand, Debug)]
 pub enum Commands {
     /// Renames files or directories
-    Rename {
+    Rn {
         /// rename many files that match a pattern
         #[arg(short, long)]
         file: bool,
@@ -19,9 +19,18 @@ pub enum Commands {
         #[arg(short, long)]
         direcory: bool,
     },
+    /// Strips and renames files or directories
+    SRn {
+        /// Strips and renames many files that match a pattern
+        #[arg(short, long)]
+        file: bool,
+        /// Strips and renames many directories that match a pattern
+        #[arg(short, long)]
+        direcory: bool,
+    },
 
     /// Deletes files or directories
-    Delete {
+    Rm {
         /// delete many files that match a pattern
         #[arg(short, long)]
         file: bool,
