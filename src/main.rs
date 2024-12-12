@@ -1,6 +1,8 @@
 mod args;
+mod async_operations;
 mod operations;
 mod visual;
+
 use crate::args::Commands;
 
 use clap::Parser;
